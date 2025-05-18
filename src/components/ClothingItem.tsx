@@ -27,8 +27,17 @@ const ClothingItem: React.FC<ClothingItemProps> = ({ item }) => {
                          "#F5FFFA"
       }}
     >
-      <div className="text-xs font-medium truncate">{item.name}</div>
-      <div className="absolute bottom-1 right-1 w-2 h-2 rounded-full" style={{ backgroundColor: item.color }}></div>
+      {item.image && (
+        <div className="absolute inset-0 w-full h-full overflow-hidden rounded-md opacity-80 z-0">
+          <img 
+            src={`/placeholder.svg`} 
+            alt={item.name}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      <div className="relative z-10 text-xs font-medium truncate">{item.name}</div>
+      <div className="absolute bottom-1 right-1 w-2 h-2 rounded-full z-10" style={{ backgroundColor: item.color }}></div>
     </div>
   );
 };

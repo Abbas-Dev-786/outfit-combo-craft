@@ -63,12 +63,21 @@ const OutfitZone: React.FC<OutfitZoneProps> = ({ outfit, setOutfit }) => {
                               "#F5FFFA"
                   }}
                 >
-                  <div className="text-xs font-medium truncate">{item.name}</div>
-                  <div className="absolute bottom-1 right-1 w-2 h-2 rounded-full" style={{ backgroundColor: item.color }}></div>
+                  {item.image && (
+                    <div className="absolute inset-0 w-full h-full overflow-hidden rounded-md opacity-80 z-0">
+                      <img 
+                        src={`/placeholder.svg`} 
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="text-xs font-medium truncate relative z-10">{item.name}</div>
+                  <div className="absolute bottom-1 right-1 w-2 h-2 rounded-full z-10" style={{ backgroundColor: item.color }}></div>
                 </div>
                 <button 
                   onClick={() => removeItem(item.id)} 
-                  className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs"
+                  className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs z-20"
                 >
                   ×
                 </button>
