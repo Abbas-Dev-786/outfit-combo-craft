@@ -16,19 +16,22 @@ const ClothingItem: React.FC<ClothingItemProps> = ({ item }) => {
     }),
   }));
 
+  const getBgColor = () => {
+    switch(item.type) {
+      case "top": return "bg-gradient-to-br from-fashion-pink to-white";
+      case "bottom": return "bg-gradient-to-br from-fashion-lavender to-white";
+      case "shoes": return "bg-gradient-to-br from-fashion-peach to-white";
+      default: return "bg-gradient-to-br from-fashion-mint to-white";
+    }
+  };
+
   return (
     <div
       ref={drag}
-      className={`clothing-item ${isDragging ? "clothing-item-dragging" : ""}`}
-      style={{ 
-        backgroundColor: item.type === "top" ? "#FFC0CB" : 
-                         item.type === "bottom" ? "#E6E6FA" : 
-                         item.type === "shoes" ? "#FFDAB9" : 
-                         "#F5FFFA"
-      }}
+      className={`clothing-item ${getBgColor()} ${isDragging ? "clothing-item-dragging" : ""}`}
     >
       {item.image && (
-        <div className="absolute inset-0 w-full h-full overflow-hidden rounded-md opacity-80 z-0">
+        <div className="absolute inset-0 w-full h-full overflow-hidden rounded-xl opacity-90 z-0">
           <img 
             src={`/placeholder.svg`} 
             alt={item.name}
@@ -36,8 +39,13 @@ const ClothingItem: React.FC<ClothingItemProps> = ({ item }) => {
           />
         </div>
       )}
-      <div className="relative z-10 text-xs font-medium truncate">{item.name}</div>
-      <div className="absolute bottom-1 right-1 w-2 h-2 rounded-full z-10" style={{ backgroundColor: item.color }}></div>
+      <div className="relative z-10 text-xs font-medium truncate bg-white/70 px-2 py-1 rounded-md shadow-sm">
+        {item.name}
+      </div>
+      <div 
+        className="absolute bottom-1 right-1 w-3 h-3 rounded-full z-10 shadow-sm border border-white/50" 
+        style={{ backgroundColor: item.color }}
+      ></div>
     </div>
   );
 };

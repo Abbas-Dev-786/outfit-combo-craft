@@ -97,15 +97,15 @@
 
 @layer components {
   .clothing-item {
-    @apply bg-white rounded-md shadow-md p-3 cursor-move relative w-20 h-20 flex items-center justify-center transition-all duration-200;
+    @apply bg-white rounded-xl shadow-md p-3 cursor-move relative w-24 h-24 flex items-center justify-center transition-all duration-300;
   }
 
   .clothing-item:hover {
-    @apply shadow-lg scale-105;
+    @apply shadow-lg scale-110 z-10;
   }
 
   .clothing-item-dragging {
-    @apply opacity-50 scale-110 z-10;
+    @apply opacity-80 scale-110 shadow-xl z-20;
   }
 
   .clothing-category {
@@ -113,6 +113,33 @@
   }
 
   .outfit-zone {
-    @apply bg-fashion-cream rounded-xl border-2 border-dashed border-fashion-lavender p-6 relative min-h-[400px];
+    @apply bg-gradient-to-br from-fashion-cream to-white rounded-xl border-2 border-dashed border-fashion-lavender p-6 relative min-h-[400px] shadow-inner;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .animate-pulse-gentle {
+    animation: pulse-gentle 2s infinite ease-in-out;
+  }
+  
+  @keyframes pulse-gentle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+  
+  @keyframes scale-in {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
   }
 }
