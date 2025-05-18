@@ -3,7 +3,7 @@ import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ClothingItem from "./ClothingItem";
 import { ClothingItem as ClothingItemType } from "@/utils/outfitScoring";
-import { Shirt, Pants, ShoeSole, Sparkles } from "lucide-react";
+import { Shirt, Sparkles } from "lucide-react";
 
 type WardrobeProps = {
   clothingItems: ClothingItemType[];
@@ -23,11 +23,11 @@ const Wardrobe: React.FC<WardrobeProps> = ({ clothingItems }) => {
             <span className="hidden sm:inline">Tops</span>
           </TabsTrigger>
           <TabsTrigger value="bottoms" className="flex items-center gap-1">
-            <Pants className="h-4 w-4" />
+            <p className="text-xl">👖</p>
             <span className="hidden sm:inline">Bottoms</span>
           </TabsTrigger>
           <TabsTrigger value="shoes" className="flex items-center gap-1">
-            <ShoeSole className="h-4 w-4" />
+            <p className="text-xl">🥾</p>
             <span className="hidden sm:inline">Shoes</span>
           </TabsTrigger>
           <TabsTrigger value="accessories" className="flex items-center gap-1">
