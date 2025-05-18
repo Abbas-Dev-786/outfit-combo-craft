@@ -1,5 +1,28 @@
-
 import { ClothingItem } from "@/utils/outfitScoring";
+
+import WhiteShirt from "@/assets/images/white-shirt.webp";
+import BlackBlouse from "@/assets/images/black-blouse.jpg";
+import BlueSweater from "@/assets/images/blue-sweater.webp";
+import RedCardigan from "@/assets/images/red-cardigan.webp";
+import GreenTank from "@/assets/images/green-tank.webp";
+
+import BlueJeans from "@/assets/images/blue-jeans.webp";
+import BlackPant from "@/assets/images/black-pants.webp";
+import BeigeSkirt from "@/assets/images/beige-skirt.webp";
+import GreyShort from "@/assets/images/grey-shorts.jpeg";
+import YogaPants from "@/assets/images/yoga-pants.jpg";
+
+import WhiteSneaker from "@/assets/images/white-sneaker.jpg";
+import BlackHeel from "@/assets/images/black-heel.webp";
+import BrownBoots from "@/assets/images/brown-boots.webp";
+import RunningShoes from "@/assets/images/running-shoes.jpg";
+import Sandal from "@/assets/images/sandals.jpg";
+
+import GoldNecklace from "@/assets/images/gold-necklance.webp";
+import SilverWatch from "@/assets/images/silver-watch.jpg";
+import Sunglass from "@/assets/images/sunglass.webp";
+import Beanie from "@/assets/images/beanie.webp";
+import Headband from "@/assets/images/headband.jpeg";
 
 export const clothingItems: ClothingItem[] = [
   // Tops
@@ -9,7 +32,7 @@ export const clothingItems: ClothingItem[] = [
     type: "top",
     color: "#FFFFFF",
     style: "casual",
-    image: "white-tshirt.jpg",
+    image: WhiteShirt,
   },
   {
     id: "top2",
@@ -17,7 +40,7 @@ export const clothingItems: ClothingItem[] = [
     type: "top",
     color: "#000000",
     style: "formal",
-    image: "black-blouse.jpg",
+    image: BlackBlouse,
   },
   {
     id: "top3",
@@ -25,7 +48,7 @@ export const clothingItems: ClothingItem[] = [
     type: "top",
     color: "#1E90FF",
     style: "casual",
-    image: "blue-sweater.jpg",
+    image: BlueSweater,
   },
   {
     id: "top4",
@@ -33,7 +56,7 @@ export const clothingItems: ClothingItem[] = [
     type: "top",
     color: "#FF0000",
     style: "casual",
-    image: "red-cardigan.jpg",
+    image: RedCardigan,
   },
   {
     id: "top5",
@@ -41,9 +64,9 @@ export const clothingItems: ClothingItem[] = [
     type: "top",
     color: "#00FF00",
     style: "sporty",
-    image: "green-tank.jpg",
+    image: GreenTank,
   },
-  
+
   // Bottoms
   {
     id: "bottom1",
@@ -51,7 +74,7 @@ export const clothingItems: ClothingItem[] = [
     type: "bottom",
     color: "#0000FF",
     style: "casual",
-    image: "blue-jeans.jpg",
+    image: BlueJeans,
   },
   {
     id: "bottom2",
@@ -59,7 +82,7 @@ export const clothingItems: ClothingItem[] = [
     type: "bottom",
     color: "#000000",
     style: "formal",
-    image: "black-pants.jpg",
+    image: BlackPant,
   },
   {
     id: "bottom3",
@@ -67,7 +90,7 @@ export const clothingItems: ClothingItem[] = [
     type: "bottom",
     color: "#F5F5DC",
     style: "formal",
-    image: "beige-skirt.jpg",
+    image: BeigeSkirt,
   },
   {
     id: "bottom4",
@@ -75,7 +98,7 @@ export const clothingItems: ClothingItem[] = [
     type: "bottom",
     color: "#808080",
     style: "casual",
-    image: "grey-shorts.jpg",
+    image: GreyShort,
   },
   {
     id: "bottom5",
@@ -83,9 +106,9 @@ export const clothingItems: ClothingItem[] = [
     type: "bottom",
     color: "#000000",
     style: "sporty",
-    image: "yoga-pants.jpg",
+    image: YogaPants,
   },
-  
+
   // Shoes
   {
     id: "shoes1",
@@ -93,7 +116,7 @@ export const clothingItems: ClothingItem[] = [
     type: "shoes",
     color: "#FFFFFF",
     style: "casual",
-    image: "white-sneakers.jpg",
+    image: WhiteSneaker,
   },
   {
     id: "shoes2",
@@ -101,7 +124,7 @@ export const clothingItems: ClothingItem[] = [
     type: "shoes",
     color: "#000000",
     style: "formal",
-    image: "black-heels.jpg",
+    image: BlackHeel,
   },
   {
     id: "shoes3",
@@ -109,7 +132,7 @@ export const clothingItems: ClothingItem[] = [
     type: "shoes",
     color: "#A52A2A",
     style: "casual",
-    image: "brown-boots.jpg",
+    image: BrownBoots,
   },
   {
     id: "shoes4",
@@ -117,7 +140,7 @@ export const clothingItems: ClothingItem[] = [
     type: "shoes",
     color: "#FF1493",
     style: "sporty",
-    image: "running-shoes.jpg",
+    image: RunningShoes,
   },
   {
     id: "shoes5",
@@ -125,9 +148,9 @@ export const clothingItems: ClothingItem[] = [
     type: "shoes",
     color: "#F5DEB3",
     style: "casual",
-    image: "sandals.jpg",
+    image: Sandal,
   },
-  
+
   // Accessories
   {
     id: "acc1",
@@ -135,7 +158,7 @@ export const clothingItems: ClothingItem[] = [
     type: "accessory",
     color: "#FFD700",
     style: "formal",
-    image: "gold-necklace.jpg",
+    image: GoldNecklace,
   },
   {
     id: "acc2",
@@ -143,7 +166,7 @@ export const clothingItems: ClothingItem[] = [
     type: "accessory",
     color: "#C0C0C0",
     style: "formal",
-    image: "silver-watch.jpg",
+    image: SilverWatch,
   },
   {
     id: "acc3",
@@ -151,7 +174,7 @@ export const clothingItems: ClothingItem[] = [
     type: "accessory",
     color: "#000000",
     style: "casual",
-    image: "sunglasses.jpg",
+    image: Sunglass,
   },
   {
     id: "acc4",
@@ -159,7 +182,7 @@ export const clothingItems: ClothingItem[] = [
     type: "accessory",
     color: "#800080",
     style: "casual",
-    image: "beanie.jpg",
+    image: Beanie,
   },
   {
     id: "acc5",
@@ -167,6 +190,6 @@ export const clothingItems: ClothingItem[] = [
     type: "accessory",
     color: "#FF69B4",
     style: "sporty",
-    image: "headband.jpg",
+    image: Headband,
   },
 ];

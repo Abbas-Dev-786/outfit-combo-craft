@@ -12,7 +12,7 @@ const Wardrobe: React.FC<WardrobeProps> = ({ clothingItems }) => {
   return (
     <div className="bg-white p-6 rounded-xl shadow-md border border-fashion-lavender/20">
       <h2 className="text-lg font-semibold mb-4 flex items-center">
-        <span className="text-primary">My</span> Wardrobe
+        <span className="text-primary">My</span>&nbsp; Wardrobe
       </h2>
 
       <Tabs defaultValue="tops" className="w-full">
